@@ -1,0 +1,2266 @@
+{
+  "towns": [
+    {
+      "name": "أبو ديس",
+      "latitude": 31.7628,
+      "longitude": 35.2626,
+      "locations": [
+        {
+          "name": "بلدية أبو ديس",
+          "latitude": 31.7634,
+          "longitude": 35.2635,
+          "category": "government"
+        },
+        {
+          "name": "جامعة القدس - أبو ديس",
+          "latitude": 31.7559,
+          "longitude": 35.2592,
+          "category": "education"
+        },
+        {
+          "name": "شارع الجامعة",
+          "latitude": 31.7589,
+          "longitude": 35.2605,
+          "category": "street"
+        },
+        {
+          "name": "مدخل أبو ديس",
+          "latitude": 31.7675,
+          "longitude": 35.2555,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي أبو ديس",
+          "latitude": 31.7646,
+          "longitude": 35.2648,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط أبو ديس",
+          "latitude": 31.7628,
+          "longitude": 35.2626,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "إذنا",
+      "latitude": 31.5587,
+      "longitude": 34.9746,
+      "locations": [
+        {
+          "name": "بلدية إذنا",
+          "latitude": 31.5594,
+          "longitude": 34.9754,
+          "category": "government"
+        },
+        {
+          "name": "سوق إذنا",
+          "latitude": 31.5577,
+          "longitude": 34.9737,
+          "category": "market"
+        },
+        {
+          "name": "شارع المدارس",
+          "latitude": 31.5602,
+          "longitude": 34.9727,
+          "category": "street"
+        },
+        {
+          "name": "مدخل إذنا",
+          "latitude": 31.5628,
+          "longitude": 34.984,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي إذنا",
+          "latitude": 31.5569,
+          "longitude": 34.9757,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط إذنا",
+          "latitude": 31.5587,
+          "longitude": 34.9746,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "أريحا",
+      "latitude": 31.856,
+      "longitude": 35.4599,
+      "locations": [
+        {
+          "name": "تل السلطان",
+          "latitude": 31.8712,
+          "longitude": 35.4447,
+          "category": "museum"
+        },
+        {
+          "name": "دوار المدينة",
+          "latitude": 31.8551,
+          "longitude": 35.459,
+          "category": "area"
+        },
+        {
+          "name": "سوق أريحا",
+          "latitude": 31.8554,
+          "longitude": 35.4609,
+          "category": "market"
+        },
+        {
+          "name": "شارع فلسطين",
+          "latitude": 31.8558,
+          "longitude": 35.4639,
+          "category": "street"
+        },
+        {
+          "name": "عين السلطان",
+          "latitude": 31.8701,
+          "longitude": 35.4464,
+          "category": "park"
+        },
+        {
+          "name": "قصر هشام",
+          "latitude": 31.8834,
+          "longitude": 35.4594,
+          "category": "museum"
+        },
+        {
+          "name": "مخيم عقبة جبر",
+          "latitude": 31.8406,
+          "longitude": 35.4491,
+          "category": "area"
+        },
+        {
+          "name": "مستشفى أريحا الحكومي",
+          "latitude": 31.8614,
+          "longitude": 35.4575,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط أريحا",
+          "latitude": 31.856,
+          "longitude": 35.4599,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "البيرة",
+      "latitude": 31.9106,
+      "longitude": 35.2163,
+      "locations": [
+        {
+          "name": "بلدية البيرة",
+          "latitude": 31.9122,
+          "longitude": 35.2168,
+          "category": "government"
+        },
+        {
+          "name": "دوار البالوع",
+          "latitude": 31.9106,
+          "longitude": 35.2163,
+          "category": "area"
+        },
+        {
+          "name": "سوق البيرة",
+          "latitude": 31.9094,
+          "longitude": 35.2154,
+          "category": "market"
+        },
+        {
+          "name": "شارع نابلس",
+          "latitude": 31.9161,
+          "longitude": 35.2156,
+          "category": "street"
+        },
+        {
+          "name": "محطة البيرة",
+          "latitude": 31.9114,
+          "longitude": 35.2187,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي البيرة",
+          "latitude": 31.913,
+          "longitude": 35.214,
+          "category": "healthcare"
+        }
+      ]
+    },
+    {
+      "name": "الخضر",
+      "latitude": 31.694,
+      "longitude": 35.1669,
+      "locations": [
+        {
+          "name": "بلدية الخضر",
+          "latitude": 31.6947,
+          "longitude": 35.166,
+          "category": "government"
+        },
+        {
+          "name": "سوق الخضر",
+          "latitude": 31.6952,
+          "longitude": 35.1674,
+          "category": "market"
+        },
+        {
+          "name": "شارع القدس الخليل",
+          "latitude": 31.6963,
+          "longitude": 35.1717,
+          "category": "street"
+        },
+        {
+          "name": "مدخل الخضر",
+          "latitude": 31.6995,
+          "longitude": 35.176,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي الخضر",
+          "latitude": 31.6929,
+          "longitude": 35.1652,
+          "category": "healthcare"
+        },
+        {
+          "name": "منطقة البرك",
+          "latitude": 31.6868,
+          "longitude": 35.1606,
+          "category": "area"
+        },
+        {
+          "name": "وسط الخضر",
+          "latitude": 31.694,
+          "longitude": 35.1669,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "الخليل",
+      "latitude": 31.5326,
+      "longitude": 35.0998,
+      "locations": [
+        {
+          "name": "البلدة القديمة",
+          "latitude": 31.5258,
+          "longitude": 35.1072,
+          "category": "area"
+        },
+        {
+          "name": "الحرس",
+          "latitude": 31.545,
+          "longitude": 35.0993,
+          "category": "area"
+        },
+        {
+          "name": "الحرم الإبراهيمي",
+          "latitude": 31.5246,
+          "longitude": 35.1107,
+          "category": "religious"
+        },
+        {
+          "name": "المستشفى الأهلي",
+          "latitude": 31.5298,
+          "longitude": 35.1025,
+          "category": "healthcare"
+        },
+        {
+          "name": "باب الزاوية",
+          "latitude": 31.5322,
+          "longitude": 35.0968,
+          "category": "market"
+        },
+        {
+          "name": "جامعة الخليل",
+          "latitude": 31.5352,
+          "longitude": 35.0936,
+          "category": "education"
+        },
+        {
+          "name": "جامعة بوليتكنك فلسطين",
+          "latitude": 31.5359,
+          "longitude": 35.093,
+          "category": "education"
+        },
+        {
+          "name": "جبل الرحمة",
+          "latitude": 31.5234,
+          "longitude": 35.0995,
+          "category": "area"
+        },
+        {
+          "name": "دوار ابن رشد",
+          "latitude": 31.5309,
+          "longitude": 35.0998,
+          "category": "area"
+        },
+        {
+          "name": "سوق الخليل القديم",
+          "latitude": 31.5271,
+          "longitude": 35.105,
+          "category": "market"
+        },
+        {
+          "name": "عين سارة",
+          "latitude": 31.5405,
+          "longitude": 35.1002,
+          "category": "street"
+        },
+        {
+          "name": "مركز المدينة",
+          "latitude": 31.5326,
+          "longitude": 35.0998,
+          "category": "area"
+        },
+        {
+          "name": "مستشفى عالية الحكومي",
+          "latitude": 31.5357,
+          "longitude": 35.0986,
+          "category": "healthcare"
+        },
+        {
+          "name": "وادي التفاح",
+          "latitude": 31.5268,
+          "longitude": 35.0897,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "الدوحة",
+      "latitude": 31.6993,
+      "longitude": 35.1812,
+      "locations": [
+        {
+          "name": "بلدية الدوحة",
+          "latitude": 31.6998,
+          "longitude": 35.1804,
+          "category": "government"
+        },
+        {
+          "name": "شارع الدوحة الرئيسي",
+          "latitude": 31.7008,
+          "longitude": 35.1841,
+          "category": "street"
+        },
+        {
+          "name": "مدخل الدوحة",
+          "latitude": 31.7022,
+          "longitude": 35.1885,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي الدوحة",
+          "latitude": 31.6984,
+          "longitude": 35.179,
+          "category": "healthcare"
+        },
+        {
+          "name": "منطقة الدوحة العليا",
+          "latitude": 31.6967,
+          "longitude": 35.1765,
+          "category": "area"
+        },
+        {
+          "name": "وسط الدوحة",
+          "latitude": 31.6993,
+          "longitude": 35.1812,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "الرام",
+      "latitude": 31.8529,
+      "longitude": 35.2344,
+      "locations": [
+        {
+          "name": "بلدية الرام",
+          "latitude": 31.8536,
+          "longitude": 35.2352,
+          "category": "government"
+        },
+        {
+          "name": "سوق الرام",
+          "latitude": 31.8519,
+          "longitude": 35.2334,
+          "category": "market"
+        },
+        {
+          "name": "شارع القدس رام الله",
+          "latitude": 31.8551,
+          "longitude": 35.232,
+          "category": "street"
+        },
+        {
+          "name": "مدخل الرام",
+          "latitude": 31.8482,
+          "longitude": 35.2361,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي الرام",
+          "latitude": 31.8545,
+          "longitude": 35.236,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط الرام",
+          "latitude": 31.8529,
+          "longitude": 35.2344,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "السموع",
+      "latitude": 31.3967,
+      "longitude": 35.0668,
+      "locations": [
+        {
+          "name": "بلدية السموع",
+          "latitude": 31.3975,
+          "longitude": 35.0677,
+          "category": "government"
+        },
+        {
+          "name": "سوق السموع",
+          "latitude": 31.3958,
+          "longitude": 35.0658,
+          "category": "market"
+        },
+        {
+          "name": "مدخل السموع",
+          "latitude": 31.403,
+          "longitude": 35.0702,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي السموع",
+          "latitude": 31.3948,
+          "longitude": 35.0681,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط السموع",
+          "latitude": 31.3967,
+          "longitude": 35.0668,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "الظاهرية",
+      "latitude": 31.409,
+      "longitude": 34.9733,
+      "locations": [
+        {
+          "name": "بلدية الظاهرية",
+          "latitude": 31.4098,
+          "longitude": 34.974,
+          "category": "government"
+        },
+        {
+          "name": "سوق الظاهرية",
+          "latitude": 31.4102,
+          "longitude": 34.9724,
+          "category": "market"
+        },
+        {
+          "name": "شارع بئر السبع",
+          "latitude": 31.407,
+          "longitude": 34.9708,
+          "category": "street"
+        },
+        {
+          "name": "مدخل الظاهرية",
+          "latitude": 31.4157,
+          "longitude": 34.9789,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي الظاهرية",
+          "latitude": 31.4111,
+          "longitude": 34.9756,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط الظاهرية",
+          "latitude": 31.409,
+          "longitude": 34.9733,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "العبيدية",
+      "latitude": 31.7167,
+      "longitude": 35.2906,
+      "locations": [
+        {
+          "name": "بلدية العبيدية",
+          "latitude": 31.7175,
+          "longitude": 35.2914,
+          "category": "government"
+        },
+        {
+          "name": "جامعة فلسطين التقنية - فرع العبيدية",
+          "latitude": 31.7181,
+          "longitude": 35.294,
+          "category": "education"
+        },
+        {
+          "name": "سوق العبيدية",
+          "latitude": 31.717,
+          "longitude": 35.2895,
+          "category": "market"
+        },
+        {
+          "name": "مدخل العبيدية",
+          "latitude": 31.714,
+          "longitude": 35.2849,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي العبيدية",
+          "latitude": 31.716,
+          "longitude": 35.2928,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط العبيدية",
+          "latitude": 31.7167,
+          "longitude": 35.2906,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "العيزرية",
+      "latitude": 31.7707,
+      "longitude": 35.2696,
+      "locations": [
+        {
+          "name": "بلدية العيزرية",
+          "latitude": 31.7714,
+          "longitude": 35.2706,
+          "category": "government"
+        },
+        {
+          "name": "سوق العيزرية",
+          "latitude": 31.7723,
+          "longitude": 35.2687,
+          "category": "market"
+        },
+        {
+          "name": "شارع القدس أريحا",
+          "latitude": 31.7679,
+          "longitude": 35.2749,
+          "category": "street"
+        },
+        {
+          "name": "مدخل العيزرية",
+          "latitude": 31.766,
+          "longitude": 35.263,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي العيزرية",
+          "latitude": 31.7693,
+          "longitude": 35.2675,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط العيزرية",
+          "latitude": 31.7707,
+          "longitude": 35.2696,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "القدس",
+      "latitude": 31.7784,
+      "longitude": 35.2354,
+      "locations": [
+        {
+          "name": "البلدة القديمة",
+          "latitude": 31.7767,
+          "longitude": 35.2345,
+          "category": "area"
+        },
+        {
+          "name": "الشيخ جراح",
+          "latitude": 31.7934,
+          "longitude": 35.2273,
+          "category": "area"
+        },
+        {
+          "name": "المسجد الأقصى",
+          "latitude": 31.7761,
+          "longitude": 35.2356,
+          "category": "religious"
+        },
+        {
+          "name": "باب العمود",
+          "latitude": 31.7822,
+          "longitude": 35.2307,
+          "category": "transport"
+        },
+        {
+          "name": "جامعة القدس - هند الحسيني",
+          "latitude": 31.7869,
+          "longitude": 35.2281,
+          "category": "education"
+        },
+        {
+          "name": "جبل المكبر",
+          "latitude": 31.7493,
+          "longitude": 35.2415,
+          "category": "area"
+        },
+        {
+          "name": "سلوان",
+          "latitude": 31.7682,
+          "longitude": 35.2363,
+          "category": "area"
+        },
+        {
+          "name": "شارع صلاح الدين",
+          "latitude": 31.7862,
+          "longitude": 35.2289,
+          "category": "street"
+        },
+        {
+          "name": "مستشفى المقاصد",
+          "latitude": 31.7818,
+          "longitude": 35.2432,
+          "category": "healthcare"
+        },
+        {
+          "name": "وادي الجوز",
+          "latitude": 31.7903,
+          "longitude": 35.2357,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "بيت أمر",
+      "latitude": 31.6236,
+      "longitude": 35.1045,
+      "locations": [
+        {
+          "name": "بلدية بيت أمر",
+          "latitude": 31.6241,
+          "longitude": 35.1054,
+          "category": "government"
+        },
+        {
+          "name": "سوق بيت أمر",
+          "latitude": 31.6228,
+          "longitude": 35.1038,
+          "category": "market"
+        },
+        {
+          "name": "شارع القدس الخليل",
+          "latitude": 31.6201,
+          "longitude": 35.1017,
+          "category": "street"
+        },
+        {
+          "name": "مدخل بيت أمر",
+          "latitude": 31.6173,
+          "longitude": 35.099,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي بيت أمر",
+          "latitude": 31.625,
+          "longitude": 35.106,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط بيت أمر",
+          "latitude": 31.6236,
+          "longitude": 35.1045,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "بيت جالا",
+      "latitude": 31.715,
+      "longitude": 35.1879,
+      "locations": [
+        {
+          "name": "بلدية بيت جالا",
+          "latitude": 31.7156,
+          "longitude": 35.1872,
+          "category": "government"
+        },
+        {
+          "name": "دير الكريمزان",
+          "latitude": 31.7221,
+          "longitude": 35.1736,
+          "category": "religious"
+        },
+        {
+          "name": "سوق بيت جالا",
+          "latitude": 31.7143,
+          "longitude": 35.1888,
+          "category": "market"
+        },
+        {
+          "name": "شارع السهل",
+          "latitude": 31.7132,
+          "longitude": 35.1844,
+          "category": "street"
+        },
+        {
+          "name": "مدخل بيت جالا",
+          "latitude": 31.7108,
+          "longitude": 35.1921,
+          "category": "transport"
+        },
+        {
+          "name": "مستشفى بيت جالا الحكومي",
+          "latitude": 31.7212,
+          "longitude": 35.1866,
+          "category": "healthcare"
+        },
+        {
+          "name": "منطقة المخرور",
+          "latitude": 31.7158,
+          "longitude": 35.1696,
+          "category": "park"
+        },
+        {
+          "name": "وسط بيت جالا",
+          "latitude": 31.715,
+          "longitude": 35.1879,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "بيت ساحور",
+      "latitude": 31.7041,
+      "longitude": 35.2171,
+      "locations": [
+        {
+          "name": "البلدة القديمة",
+          "latitude": 31.703072539895896,
+          "longitude": 35.218532484398146,
+          "category": ""
+        },
+        {
+          "name": "حقل الرعاة (ش)",
+          "latitude": 31.701565,
+          "longitude": 35.225833,
+          "category": ""
+        },
+        {
+          "name": "حقل الرعاة (غ)",
+          "latitude": 31.7074,
+          "longitude": 35.23,
+          "category": ""
+        },
+        {
+          "name": "سوق الشعب",
+          "latitude": 31.7048,
+          "longitude": 35.2186,
+          "category": ""
+        },
+        {
+          "name": "شارع اسطيح",
+          "latitude": 31.700345,
+          "longitude": 35.225018,
+          "category": ""
+        },
+        {
+          "name": "عش غراب",
+          "latitude": 31.698552,
+          "longitude": 35.236512,
+          "category": ""
+        },
+        {
+          "name": "وسط البلدة / البلدية",
+          "latitude": 31.7041,
+          "longitude": 35.2171,
+          "category": ""
+        },
+        {
+          "name": "YMCA",
+          "latitude": 31.703607,
+          "longitude": 35.236151,
+          "category": ""
+        }
+      ]
+    },
+    {
+      "name": "بيت فجار",
+      "latitude": 31.6247,
+      "longitude": 35.1547,
+      "locations": [
+        {
+          "name": "بلدية بيت فجار",
+          "latitude": 31.6253,
+          "longitude": 35.1554,
+          "category": "government"
+        },
+        {
+          "name": "سوق بيت فجار",
+          "latitude": 31.6238,
+          "longitude": 35.1538,
+          "category": "market"
+        },
+        {
+          "name": "مدخل بيت فجار",
+          "latitude": 31.6295,
+          "longitude": 35.1518,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي بيت فجار",
+          "latitude": 31.6228,
+          "longitude": 35.1558,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط بيت فجار",
+          "latitude": 31.6247,
+          "longitude": 35.1547,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "بيت لحم",
+      "latitude": 31.704498,
+      "longitude": 35.207706,
+      "locations": [
+        {
+          "name": "الامن الوطني",
+          "latitude": 31.69446377868719,
+          "longitude": 35.189744522697055,
+          "category": "government"
+        },
+        {
+          "name": "البنك العربي",
+          "latitude": 31.708551,
+          "longitude": 35.205664,
+          "category": "bank"
+        },
+        {
+          "name": "البنك الوطني",
+          "latitude": 31.704090367820644,
+          "longitude": 35.193510232547474,
+          "category": "bank"
+        },
+        {
+          "name": "الجمعية الانطوانية الخيرية",
+          "latitude": 31.716403,
+          "longitude": 35.204026,
+          "category": "charity"
+        },
+        {
+          "name": "الدوار الروسي",
+          "latitude": 31.698545136409216,
+          "longitude": 35.188601759491306,
+          "category": "area"
+        },
+        {
+          "name": "السوق المركزي (بيت لحم)",
+          "latitude": 31.696686,
+          "longitude": 35.190831,
+          "category": "market"
+        },
+        {
+          "name": "المسلماني",
+          "latitude": 31.703401064278246,
+          "longitude": 35.194567153771224,
+          "category": "market"
+        },
+        {
+          "name": "برنامج قرية الأطفال - بيت لحم",
+          "latitude": 31.710945396678838,
+          "longitude": 35.208981744940424,
+          "category": "charity"
+        },
+        {
+          "name": "بنك الإستثمار الفلسطيني",
+          "latitude": 31.701977134402167,
+          "longitude": 35.19389120654055,
+          "category": "bank"
+        },
+        {
+          "name": "بنك القدس",
+          "latitude": 31.70892326622085,
+          "longitude": 35.20682422384021,
+          "category": "bank"
+        },
+        {
+          "name": "جامعة بيت لحم",
+          "latitude": 31.710078,
+          "longitude": 35.201987,
+          "category": "education"
+        },
+        {
+          "name": "جامعة دار الكلمة",
+          "latitude": 31.696545,
+          "longitude": 35.189412,
+          "category": "education"
+        },
+        {
+          "name": "جامعة فلسطين الأهلية",
+          "latitude": 31.695676,
+          "longitude": 35.188116,
+          "category": "education"
+        },
+        {
+          "name": "جمعية رعاية الايتام بيت لحم",
+          "latitude": 31.697673218995895,
+          "longitude": 35.20350433599102,
+          "category": "charity"
+        },
+        {
+          "name": "حارة الفرحية",
+          "latitude": 31.707624221974022,
+          "longitude": 35.19916979321755,
+          "category": "area"
+        },
+        {
+          "name": "حارة الفواغرة",
+          "latitude": 31.704874068692803,
+          "longitude": 35.20334665398849,
+          "category": "area"
+        },
+        {
+          "name": "روضة بيت لحم الحكومية",
+          "latitude": 31.700120359653464,
+          "longitude": 35.19752348487962,
+          "category": "education"
+        },
+        {
+          "name": "سوبر ماركت الراضي",
+          "latitude": 31.704817,
+          "longitude": 35.194263,
+          "category": "market"
+        },
+        {
+          "name": "شارع خُطَّار",
+          "latitude": 31.716908,
+          "longitude": 35.204087,
+          "category": "street"
+        },
+        {
+          "name": "شارع كاركفيه 353",
+          "latitude": 31.712622,
+          "longitude": 35.209489,
+          "category": "street"
+        },
+        {
+          "name": "شركة الاتصالات الفلسطينية - بالتل",
+          "latitude": 31.706214,
+          "longitude": 35.204618,
+          "category": "business"
+        },
+        {
+          "name": "شركة بيت لحم للمحروقات",
+          "latitude": 31.696669595996607,
+          "longitude": 35.18562474331989,
+          "category": "gas_station"
+        },
+        {
+          "name": "فرن بيت المقدس",
+          "latitude": 31.70672876747861,
+          "longitude": 35.20017852104118,
+          "category": "bakery"
+        },
+        {
+          "name": "فندق داياموند",
+          "latitude": 31.720072386773786,
+          "longitude": 35.20581652040452,
+          "category": "hotel"
+        },
+        {
+          "name": "فندق سانتا ماريا",
+          "latitude": 31.71182635445766,
+          "longitude": 35.210382031434825,
+          "category": "hotel"
+        },
+        {
+          "name": "كازية الجراشي",
+          "latitude": 31.707139133638304,
+          "longitude": 35.205134822119135,
+          "category": "gas_station"
+        },
+        {
+          "name": "كنيسة المهد",
+          "latitude": 31.704498,
+          "longitude": 35.207706,
+          "category": "religious"
+        },
+        {
+          "name": "كنيسة مغارة الحليب",
+          "latitude": 31.70349,
+          "longitude": 35.209183,
+          "category": "religious"
+        },
+        {
+          "name": "مار شربل",
+          "latitude": 31.70292237546569,
+          "longitude": 35.20423937286755,
+          "category": "religious"
+        },
+        {
+          "name": "متحف فلسطين للتاريخ الطبيعي",
+          "latitude": 31.718275,
+          "longitude": 35.204646,
+          "category": "museum"
+        },
+        {
+          "name": "متحف فلسطين للتاريخ الطبيعي",
+          "latitude": 31.718196784782837,
+          "longitude": 35.20545703331381,
+          "category": "museum"
+        },
+        {
+          "name": "محكمة بيت لحم",
+          "latitude": 31.698440137208774,
+          "longitude": 35.19003960156219,
+          "category": "courthouse"
+        },
+        {
+          "name": "مخبز التاج",
+          "latitude": 31.705561,
+          "longitude": 35.209294,
+          "category": "bakery"
+        },
+        {
+          "name": "مدرسة الأخاء الأسلامية",
+          "latitude": 31.71283945637656,
+          "longitude": 35.21080551221275,
+          "category": "education"
+        },
+        {
+          "name": "مدرسة الفرير الثانوية",
+          "latitude": 31.70543274440421,
+          "longitude": 35.197184949245965,
+          "category": "education"
+        },
+        {
+          "name": "مركز خطوات لتطوير الطفل",
+          "latitude": 31.702707971172938,
+          "longitude": 35.20726500561365,
+          "category": "education"
+        },
+        {
+          "name": "مستشفى العائلة المقدسة",
+          "latitude": 31.709938512846982,
+          "longitude": 35.19992626982946,
+          "category": "healthcare"
+        },
+        {
+          "name": "مستشفى بيت لحم للطب النفسي",
+          "latitude": 31.698794,
+          "longitude": 35.192508,
+          "category": "healthcare"
+        },
+        {
+          "name": "مستشفى كاريتاس",
+          "latitude": 31.720177,
+          "longitude": 35.204192,
+          "category": "healthcare"
+        },
+        {
+          "name": "مسجد صلاح الدين",
+          "latitude": 31.70111534426593,
+          "longitude": 35.19792492205144,
+          "category": "religious"
+        },
+        {
+          "name": "مطعم ديسمبر",
+          "latitude": 31.704505773441984,
+          "longitude": 35.194229153582945,
+          "category": "restaurant"
+        },
+        {
+          "name": "مطعم وج الأمر",
+          "latitude": 31.704709,
+          "longitude": 35.210938,
+          "category": "restaurant"
+        },
+        {
+          "name": "معهد اريج",
+          "latitude": 31.7154547623499,
+          "longitude": 35.206996233323025,
+          "category": "education"
+        },
+        {
+          "name": "مكتب تكاسي المدبسة",
+          "latitude": 31.702009409105607,
+          "longitude": 35.1986056896186,
+          "category": "taxi"
+        },
+        {
+          "name": "منطقة السينما",
+          "latitude": 31.708291,
+          "longitude": 35.200143,
+          "category": "area"
+        },
+        {
+          "name": "منطقة باب زقاق",
+          "latitude": 31.710339,
+          "longitude": 35.198494,
+          "category": "area"
+        },
+        {
+          "name": "منظمة غربة لاجئ",
+          "latitude": 31.696751006310006,
+          "longitude": 35.18623035389574,
+          "category": "charity"
+        },
+        {
+          "name": "Ararat Hotel Bethlehem",
+          "latitude": 31.704674,
+          "longitude": 35.21425,
+          "category": "hotel"
+        },
+        {
+          "name": "Holy Family Hotel",
+          "latitude": 31.705748,
+          "longitude": 35.20534,
+          "category": "hotel"
+        },
+        {
+          "name": "KFC",
+          "latitude": 31.706409,
+          "longitude": 35.204595,
+          "category": "restaurant"
+        }
+      ]
+    },
+    {
+      "name": "بيتونيا",
+      "latitude": 31.8969,
+      "longitude": 35.1704,
+      "locations": [
+        {
+          "name": "بلدية بيتونيا",
+          "latitude": 31.8976,
+          "longitude": 35.1711,
+          "category": "government"
+        },
+        {
+          "name": "سوق بيتونيا",
+          "latitude": 31.8961,
+          "longitude": 35.1692,
+          "category": "market"
+        },
+        {
+          "name": "شارع عين عريك",
+          "latitude": 31.8989,
+          "longitude": 35.163,
+          "category": "street"
+        },
+        {
+          "name": "مدخل بيتونيا",
+          "latitude": 31.9007,
+          "longitude": 35.1791,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي بيتونيا",
+          "latitude": 31.8951,
+          "longitude": 35.1722,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط بيتونيا",
+          "latitude": 31.8969,
+          "longitude": 35.1704,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "بيرزيت",
+      "latitude": 31.9692,
+      "longitude": 35.1945,
+      "locations": [
+        {
+          "name": "بلدية بيرزيت",
+          "latitude": 31.9699,
+          "longitude": 35.1954,
+          "category": "government"
+        },
+        {
+          "name": "جامعة بيرزيت",
+          "latitude": 31.9606,
+          "longitude": 35.1815,
+          "category": "education"
+        },
+        {
+          "name": "سوق بيرزيت",
+          "latitude": 31.9706,
+          "longitude": 35.1935,
+          "category": "market"
+        },
+        {
+          "name": "شارع الجامعة",
+          "latitude": 31.9632,
+          "longitude": 35.1848,
+          "category": "street"
+        },
+        {
+          "name": "مركز صحي بيرزيت",
+          "latitude": 31.968,
+          "longitude": 35.1962,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط بيرزيت",
+          "latitude": 31.9692,
+          "longitude": 35.1945,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "ترقوميا",
+      "latitude": 31.5756,
+      "longitude": 35.0123,
+      "locations": [
+        {
+          "name": "بلدية ترقوميا",
+          "latitude": 31.576,
+          "longitude": 35.0135,
+          "category": "government"
+        },
+        {
+          "name": "سوق ترقوميا",
+          "latitude": 31.5746,
+          "longitude": 35.0114,
+          "category": "market"
+        },
+        {
+          "name": "شارع الخليل",
+          "latitude": 31.5742,
+          "longitude": 35.0152,
+          "category": "street"
+        },
+        {
+          "name": "مدخل ترقوميا",
+          "latitude": 31.5797,
+          "longitude": 35.0203,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي ترقوميا",
+          "latitude": 31.5769,
+          "longitude": 35.0115,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط ترقوميا",
+          "latitude": 31.5756,
+          "longitude": 35.0123,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "تقوع",
+      "latitude": 31.6407,
+      "longitude": 35.2262,
+      "locations": [
+        {
+          "name": "بلدية تقوع",
+          "latitude": 31.6412,
+          "longitude": 35.2269,
+          "category": "government"
+        },
+        {
+          "name": "سوق تقوع",
+          "latitude": 31.6399,
+          "longitude": 35.2252,
+          "category": "market"
+        },
+        {
+          "name": "شارع المدرسة",
+          "latitude": 31.642,
+          "longitude": 35.2284,
+          "category": "street"
+        },
+        {
+          "name": "مدخل تقوع",
+          "latitude": 31.6461,
+          "longitude": 35.219,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي تقوع",
+          "latitude": 31.6391,
+          "longitude": 35.227,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط تقوع",
+          "latitude": 31.6407,
+          "longitude": 35.2262,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "جباليا",
+      "latitude": 31.5272,
+      "longitude": 34.4835,
+      "locations": [
+        {
+          "name": "سوق جباليا",
+          "latitude": 31.528,
+          "longitude": 34.4842,
+          "category": "market"
+        },
+        {
+          "name": "مخيم جباليا",
+          "latitude": 31.5346,
+          "longitude": 34.499,
+          "category": "area"
+        },
+        {
+          "name": "مدخل جباليا",
+          "latitude": 31.5207,
+          "longitude": 34.477,
+          "category": "transport"
+        },
+        {
+          "name": "مستشفى اليمن السعيد",
+          "latitude": 31.532,
+          "longitude": 34.4897,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط جباليا",
+          "latitude": 31.5272,
+          "longitude": 34.4835,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "جنين",
+      "latitude": 32.4594,
+      "longitude": 35.3009,
+      "locations": [
+        {
+          "name": "البلدية",
+          "latitude": 32.4611,
+          "longitude": 35.2997,
+          "category": "government"
+        },
+        {
+          "name": "الجامعة العربية الأمريكية - جنين",
+          "latitude": 32.4786,
+          "longitude": 35.2846,
+          "category": "education"
+        },
+        {
+          "name": "دوار السينما",
+          "latitude": 32.459,
+          "longitude": 35.3019,
+          "category": "area"
+        },
+        {
+          "name": "سوق جنين",
+          "latitude": 32.4603,
+          "longitude": 35.299,
+          "category": "market"
+        },
+        {
+          "name": "شارع الناصرة",
+          "latitude": 32.4651,
+          "longitude": 35.2978,
+          "category": "street"
+        },
+        {
+          "name": "مخيم جنين",
+          "latitude": 32.4632,
+          "longitude": 35.2867,
+          "category": "area"
+        },
+        {
+          "name": "مركز جنين",
+          "latitude": 32.4594,
+          "longitude": 35.3009,
+          "category": "area"
+        },
+        {
+          "name": "مستشفى جنين الحكومي",
+          "latitude": 32.4622,
+          "longitude": 35.3044,
+          "category": "healthcare"
+        }
+      ]
+    },
+    {
+      "name": "حلحول",
+      "latitude": 31.5786,
+      "longitude": 35.1016,
+      "locations": [
+        {
+          "name": "بلدية حلحول",
+          "latitude": 31.5794,
+          "longitude": 35.1014,
+          "category": "government"
+        },
+        {
+          "name": "دوار حلحول",
+          "latitude": 31.5764,
+          "longitude": 35.0988,
+          "category": "area"
+        },
+        {
+          "name": "سوق حلحول",
+          "latitude": 31.579,
+          "longitude": 35.1024,
+          "category": "market"
+        },
+        {
+          "name": "شارع القدس",
+          "latitude": 31.5808,
+          "longitude": 35.1035,
+          "category": "street"
+        },
+        {
+          "name": "مدخل حلحول الجنوبي",
+          "latitude": 31.5689,
+          "longitude": 35.1014,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي حلحول",
+          "latitude": 31.5772,
+          "longitude": 35.1002,
+          "category": "healthcare"
+        },
+        {
+          "name": "منطقة النبي يونس",
+          "latitude": 31.5817,
+          "longitude": 35.1055,
+          "category": "religious"
+        },
+        {
+          "name": "وسط البلد",
+          "latitude": 31.5786,
+          "longitude": 35.1016,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "حوارة",
+      "latitude": 32.151,
+      "longitude": 35.2562,
+      "locations": [
+        {
+          "name": "سوق حوارة",
+          "latitude": 32.1494,
+          "longitude": 35.2569,
+          "category": "market"
+        },
+        {
+          "name": "شارع حوارة الرئيسي",
+          "latitude": 32.1505,
+          "longitude": 35.2552,
+          "category": "street"
+        },
+        {
+          "name": "مدخل حوارة الشمالي",
+          "latitude": 32.1588,
+          "longitude": 35.2575,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي حوارة",
+          "latitude": 32.1485,
+          "longitude": 35.2542,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط حوارة",
+          "latitude": 32.151,
+          "longitude": 35.2562,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "خان يونس",
+      "latitude": 31.3462,
+      "longitude": 34.3032,
+      "locations": [
+        {
+          "name": "بلدية خان يونس",
+          "latitude": 31.3469,
+          "longitude": 34.302,
+          "category": "government"
+        },
+        {
+          "name": "سوق خان يونس",
+          "latitude": 31.3448,
+          "longitude": 34.303,
+          "category": "market"
+        },
+        {
+          "name": "شارع البحر",
+          "latitude": 31.3465,
+          "longitude": 34.2895,
+          "category": "street"
+        },
+        {
+          "name": "محطة خان يونس",
+          "latitude": 31.3404,
+          "longitude": 34.3079,
+          "category": "transport"
+        },
+        {
+          "name": "مستشفى ناصر",
+          "latitude": 31.3518,
+          "longitude": 34.2978,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط خان يونس",
+          "latitude": 31.3462,
+          "longitude": 34.3032,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "دورا",
+      "latitude": 31.5075,
+      "longitude": 35.0293,
+      "locations": [
+        {
+          "name": "بلدية دورا",
+          "latitude": 31.5079,
+          "longitude": 35.0308,
+          "category": "government"
+        },
+        {
+          "name": "دوار دورا الرئيسي",
+          "latitude": 31.5067,
+          "longitude": 35.0275,
+          "category": "area"
+        },
+        {
+          "name": "سوق دورا",
+          "latitude": 31.5089,
+          "longitude": 35.0285,
+          "category": "market"
+        },
+        {
+          "name": "شارع البلدية",
+          "latitude": 31.5082,
+          "longitude": 35.0316,
+          "category": "street"
+        },
+        {
+          "name": "مدخل دورا الشرقي",
+          "latitude": 31.5115,
+          "longitude": 35.0405,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي دورا",
+          "latitude": 31.5094,
+          "longitude": 35.0329,
+          "category": "healthcare"
+        },
+        {
+          "name": "منطقة سنجر",
+          "latitude": 31.4998,
+          "longitude": 35.0257,
+          "category": "area"
+        },
+        {
+          "name": "وسط دورا",
+          "latitude": 31.5075,
+          "longitude": 35.0293,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "دير البلح",
+      "latitude": 31.417,
+      "longitude": 34.3503,
+      "locations": [
+        {
+          "name": "بلدية دير البلح",
+          "latitude": 31.4178,
+          "longitude": 34.3492,
+          "category": "government"
+        },
+        {
+          "name": "سوق دير البلح",
+          "latitude": 31.416,
+          "longitude": 34.351,
+          "category": "market"
+        },
+        {
+          "name": "شارع البحر",
+          "latitude": 31.4172,
+          "longitude": 34.3375,
+          "category": "street"
+        },
+        {
+          "name": "مستشفى شهداء الأقصى",
+          "latitude": 31.4195,
+          "longitude": 34.355,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط دير البلح",
+          "latitude": 31.417,
+          "longitude": 34.3503,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "رام الله",
+      "latitude": 31.9038,
+      "longitude": 35.2034,
+      "locations": [
+        {
+          "name": "الإرسال",
+          "latitude": 31.8981,
+          "longitude": 35.2076,
+          "category": "area"
+        },
+        {
+          "name": "الطيرة",
+          "latitude": 31.8995,
+          "longitude": 35.1872,
+          "category": "area"
+        },
+        {
+          "name": "المصيون",
+          "latitude": 31.9001,
+          "longitude": 35.1955,
+          "category": "area"
+        },
+        {
+          "name": "المقاطعة",
+          "latitude": 31.9092,
+          "longitude": 35.1961,
+          "category": "government"
+        },
+        {
+          "name": "جامعة بيرزيت - رام الله",
+          "latitude": 31.9048,
+          "longitude": 35.1993,
+          "category": "education"
+        },
+        {
+          "name": "دوار المنارة",
+          "latitude": 31.9038,
+          "longitude": 35.2034,
+          "category": "area"
+        },
+        {
+          "name": "سوق رام الله",
+          "latitude": 31.9057,
+          "longitude": 35.2056,
+          "category": "market"
+        },
+        {
+          "name": "شارع ركب",
+          "latitude": 31.9022,
+          "longitude": 35.2015,
+          "category": "street"
+        },
+        {
+          "name": "مجمع فلسطين الطبي",
+          "latitude": 31.9031,
+          "longitude": 35.1918,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط رام الله",
+          "latitude": 31.9044,
+          "longitude": 35.2045,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "رفح",
+      "latitude": 31.2969,
+      "longitude": 34.2435,
+      "locations": [
+        {
+          "name": "بلدية رفح",
+          "latitude": 31.2976,
+          "longitude": 34.2427,
+          "category": "government"
+        },
+        {
+          "name": "سوق رفح",
+          "latitude": 31.2961,
+          "longitude": 34.2445,
+          "category": "market"
+        },
+        {
+          "name": "شارع صلاح الدين",
+          "latitude": 31.302,
+          "longitude": 34.2547,
+          "category": "street"
+        },
+        {
+          "name": "مستشفى أبو يوسف النجار",
+          "latitude": 31.2931,
+          "longitude": 34.2526,
+          "category": "healthcare"
+        },
+        {
+          "name": "معبر رفح",
+          "latitude": 31.2476,
+          "longitude": 34.2556,
+          "category": "transport"
+        },
+        {
+          "name": "وسط رفح",
+          "latitude": 31.2969,
+          "longitude": 34.2435,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "سعير",
+      "latitude": 31.5789,
+      "longitude": 35.1417,
+      "locations": [
+        {
+          "name": "بلدية سعير",
+          "latitude": 31.5795,
+          "longitude": 35.1425,
+          "category": "government"
+        },
+        {
+          "name": "سوق سعير",
+          "latitude": 31.578,
+          "longitude": 35.1408,
+          "category": "market"
+        },
+        {
+          "name": "شارع الشهداء",
+          "latitude": 31.5804,
+          "longitude": 35.1446,
+          "category": "street"
+        },
+        {
+          "name": "مدخل سعير",
+          "latitude": 31.5757,
+          "longitude": 35.1349,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي سعير",
+          "latitude": 31.5771,
+          "longitude": 35.1438,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط سعير",
+          "latitude": 31.5789,
+          "longitude": 35.1417,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "سلفيت",
+      "latitude": 32.0851,
+      "longitude": 35.1809,
+      "locations": [
+        {
+          "name": "بلدية سلفيت",
+          "latitude": 32.0858,
+          "longitude": 35.1818,
+          "category": "government"
+        },
+        {
+          "name": "جامعة القدس المفتوحة - سلفيت",
+          "latitude": 32.0868,
+          "longitude": 35.1781,
+          "category": "education"
+        },
+        {
+          "name": "سوق سلفيت",
+          "latitude": 32.0855,
+          "longitude": 35.1797,
+          "category": "market"
+        },
+        {
+          "name": "شارع يافا",
+          "latitude": 32.0834,
+          "longitude": 35.1776,
+          "category": "street"
+        },
+        {
+          "name": "مستشفى سلفيت الحكومي",
+          "latitude": 32.084,
+          "longitude": 35.1835,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط سلفيت",
+          "latitude": 32.0851,
+          "longitude": 35.1809,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "طمون",
+      "latitude": 32.2835,
+      "longitude": 35.3832,
+      "locations": [
+        {
+          "name": "بلدية طمون",
+          "latitude": 32.2842,
+          "longitude": 35.384,
+          "category": "government"
+        },
+        {
+          "name": "سوق طمون",
+          "latitude": 32.2827,
+          "longitude": 35.3824,
+          "category": "market"
+        },
+        {
+          "name": "مدخل طمون",
+          "latitude": 32.287,
+          "longitude": 35.3786,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي طمون",
+          "latitude": 32.2816,
+          "longitude": 35.3845,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط طمون",
+          "latitude": 32.2835,
+          "longitude": 35.3832,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "طوباس",
+      "latitude": 32.3206,
+      "longitude": 35.3699,
+      "locations": [
+        {
+          "name": "بلدية طوباس",
+          "latitude": 32.3214,
+          "longitude": 35.3707,
+          "category": "government"
+        },
+        {
+          "name": "سوق طوباس",
+          "latitude": 32.3198,
+          "longitude": 35.3691,
+          "category": "market"
+        },
+        {
+          "name": "شارع جنين",
+          "latitude": 32.3255,
+          "longitude": 35.3658,
+          "category": "street"
+        },
+        {
+          "name": "محطة طوباس",
+          "latitude": 32.32,
+          "longitude": 35.372,
+          "category": "transport"
+        },
+        {
+          "name": "مستشفى طوباس التركي",
+          "latitude": 32.3237,
+          "longitude": 35.3715,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط طوباس",
+          "latitude": 32.3206,
+          "longitude": 35.3699,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "طولكرم",
+      "latitude": 32.3104,
+      "longitude": 35.0286,
+      "locations": [
+        {
+          "name": "جامعة فلسطين التقنية خضوري",
+          "latitude": 32.3152,
+          "longitude": 35.0198,
+          "category": "education"
+        },
+        {
+          "name": "سوق طولكرم",
+          "latitude": 32.3095,
+          "longitude": 35.028,
+          "category": "market"
+        },
+        {
+          "name": "شارع نابلس",
+          "latitude": 32.3119,
+          "longitude": 35.0344,
+          "category": "street"
+        },
+        {
+          "name": "مخيم طولكرم",
+          "latitude": 32.3076,
+          "longitude": 35.0235,
+          "category": "area"
+        },
+        {
+          "name": "مخيم نور شمس",
+          "latitude": 32.3149,
+          "longitude": 35.0592,
+          "category": "area"
+        },
+        {
+          "name": "مستشفى ثابت ثابت",
+          "latitude": 32.3121,
+          "longitude": 35.0321,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط طولكرم",
+          "latitude": 32.3104,
+          "longitude": 35.0286,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "غزة",
+      "latitude": 31.5017,
+      "longitude": 34.4668,
+      "locations": [
+        {
+          "name": "الجامعة الإسلامية",
+          "latitude": 31.5144,
+          "longitude": 34.4415,
+          "category": "education"
+        },
+        {
+          "name": "الرمال",
+          "latitude": 31.5165,
+          "longitude": 34.4508,
+          "category": "area"
+        },
+        {
+          "name": "جامعة الأزهر",
+          "latitude": 31.5158,
+          "longitude": 34.4436,
+          "category": "education"
+        },
+        {
+          "name": "سوق الزاوية",
+          "latitude": 31.5032,
+          "longitude": 34.4649,
+          "category": "market"
+        },
+        {
+          "name": "شارع عمر المختار",
+          "latitude": 31.5073,
+          "longitude": 34.461,
+          "category": "street"
+        },
+        {
+          "name": "مركز مدينة غزة",
+          "latitude": 31.5017,
+          "longitude": 34.4668,
+          "category": "area"
+        },
+        {
+          "name": "مستشفى الشفاء",
+          "latitude": 31.5255,
+          "longitude": 34.445,
+          "category": "healthcare"
+        },
+        {
+          "name": "ميناء غزة",
+          "latitude": 31.5251,
+          "longitude": 34.4338,
+          "category": "transport"
+        }
+      ]
+    },
+    {
+      "name": "قباطية",
+      "latitude": 32.4107,
+      "longitude": 35.2808,
+      "locations": [
+        {
+          "name": "بلدية قباطية",
+          "latitude": 32.4116,
+          "longitude": 35.2815,
+          "category": "government"
+        },
+        {
+          "name": "سوق قباطية",
+          "latitude": 32.4097,
+          "longitude": 35.2795,
+          "category": "market"
+        },
+        {
+          "name": "شارع جنين",
+          "latitude": 32.4136,
+          "longitude": 35.284,
+          "category": "street"
+        },
+        {
+          "name": "مركز صحي قباطية",
+          "latitude": 32.4088,
+          "longitude": 35.282,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط قباطية",
+          "latitude": 32.4107,
+          "longitude": 35.2808,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "قلقيلية",
+      "latitude": 32.196,
+      "longitude": 34.9647,
+      "locations": [
+        {
+          "name": "بلدية قلقيلية",
+          "latitude": 32.1971,
+          "longitude": 34.9655,
+          "category": "government"
+        },
+        {
+          "name": "حديقة الحيوانات",
+          "latitude": 32.1902,
+          "longitude": 34.9686,
+          "category": "park"
+        },
+        {
+          "name": "سوق قلقيلية",
+          "latitude": 32.1964,
+          "longitude": 34.9636,
+          "category": "market"
+        },
+        {
+          "name": "شارع نابلس",
+          "latitude": 32.1973,
+          "longitude": 34.9698,
+          "category": "street"
+        },
+        {
+          "name": "محطة قلقيلية",
+          "latitude": 32.195,
+          "longitude": 34.9664,
+          "category": "transport"
+        },
+        {
+          "name": "مستشفى درويش نزال",
+          "latitude": 32.1977,
+          "longitude": 34.9711,
+          "category": "healthcare"
+        },
+        {
+          "name": "وسط قلقيلية",
+          "latitude": 32.196,
+          "longitude": 34.9647,
+          "category": "area"
+        }
+      ]
+    },
+    {
+      "name": "مخيم الدهيشة",
+      "latitude": 31.6937,
+      "longitude": 35.189,
+      "locations": [
+        {
+          "name": "سوق الدهيشة",
+          "latitude": 31.6931,
+          "longitude": 35.1899,
+          "category": "market"
+        },
+        {
+          "name": "شارع القدس الخليل",
+          "latitude": 31.6961,
+          "longitude": 35.1887,
+          "category": "street"
+        },
+        {
+          "name": "مدخل الدهيشة",
+          "latitude": 31.6944,
+          "longitude": 35.1908,
+          "category": "transport"
+        },
+        {
+          "name": "مركز الدهيشة",
+          "latitude": 31.6937,
+          "longitude": 35.189,
+          "category": "area"
+        },
+        {
+          "name": "مركز صحي الدهيشة",
+          "latitude": 31.6928,
+          "longitude": 35.1878,
+          "category": "healthcare"
+        }
+      ]
+    },
+    {
+      "name": "نابلس",
+      "latitude": 32.2211,
+      "longitude": 35.2544,
+      "locations": [
+        {
+          "name": "البلدة القديمة",
+          "latitude": 32.2209,
+          "longitude": 35.262,
+          "category": "area"
+        },
+        {
+          "name": "المخفية",
+          "latitude": 32.2235,
+          "longitude": 35.245,
+          "category": "area"
+        },
+        {
+          "name": "جامعة النجاح الوطنية",
+          "latitude": 32.2269,
+          "longitude": 35.2227,
+          "category": "education"
+        },
+        {
+          "name": "دوار الشهداء",
+          "latitude": 32.2211,
+          "longitude": 35.2544,
+          "category": "area"
+        },
+        {
+          "name": "دوار زواتا",
+          "latitude": 32.2309,
+          "longitude": 35.2399,
+          "category": "area"
+        },
+        {
+          "name": "رفيديا",
+          "latitude": 32.2227,
+          "longitude": 35.2334,
+          "category": "area"
+        },
+        {
+          "name": "سوق نابلس",
+          "latitude": 32.2215,
+          "longitude": 35.2602,
+          "category": "market"
+        },
+        {
+          "name": "شارع فيصل",
+          "latitude": 32.2228,
+          "longitude": 35.2534,
+          "category": "street"
+        },
+        {
+          "name": "مستشفى النجاح الوطني",
+          "latitude": 32.2248,
+          "longitude": 35.221,
+          "category": "healthcare"
+        },
+        {
+          "name": "مستشفى رفيديا",
+          "latitude": 32.2224,
+          "longitude": 35.2311,
+          "category": "healthcare"
+        }
+      ]
+    },
+    {
+      "name": "يطا",
+      "latitude": 31.4477,
+      "longitude": 35.0944,
+      "locations": [
+        {
+          "name": "بلدية يطا",
+          "latitude": 31.4489,
+          "longitude": 35.0935,
+          "category": "government"
+        },
+        {
+          "name": "دوار يطا",
+          "latitude": 31.4482,
+          "longitude": 35.092,
+          "category": "area"
+        },
+        {
+          "name": "سوق يطا",
+          "latitude": 31.4468,
+          "longitude": 35.0949,
+          "category": "market"
+        },
+        {
+          "name": "شارع الكرمل",
+          "latitude": 31.4499,
+          "longitude": 35.0889,
+          "category": "street"
+        },
+        {
+          "name": "مدخل يطا الشمالي",
+          "latitude": 31.4593,
+          "longitude": 35.095,
+          "category": "transport"
+        },
+        {
+          "name": "مركز صحي يطا",
+          "latitude": 31.446,
+          "longitude": 35.097,
+          "category": "healthcare"
+        },
+        {
+          "name": "منطقة رقعة",
+          "latitude": 31.4385,
+          "longitude": 35.0931,
+          "category": "area"
+        },
+        {
+          "name": "وسط يطا",
+          "latitude": 31.4477,
+          "longitude": 35.0944,
+          "category": "area"
+        }
+      ]
+    }
+  ]
+}
