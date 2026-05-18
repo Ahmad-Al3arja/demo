@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState, useRef } from 'react';
-import { MapContainer, Marker, Polygon, Polyline, TileLayer, useMap } from 'react-leaflet';
+import { useCallback, useEffect, useState, useRef, useMemo } from 'react';
+import { MapContainer, Marker, Polygon, Polyline, TileLayer, Popup, Tooltip, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import {
   Bell,
@@ -25,13 +25,8 @@ import {
   X,
 } from 'lucide-react';
 import westBankGeoJson from './data/regions.json';
+import areasData from './data/bethlehem-areas.json';
 import './App.css';
-
-const PICKUP = [31.5850, 35.1050];
-const DESTINATION = [31.5400, 35.0900];
-const DRIVER_START = [31.6000, 35.1150];
-
-const DESTINATION_LABEL = 'Hebron Center';
 
 const DRIVER = {
   name: 'Ahmad Alarja',
@@ -116,8 +111,7 @@ function generateRoute(start, end, steps = 60) {
   return points;
 }
 
-const driverToPickupRoute = generateRoute(DRIVER_START, PICKUP, 50);
-const pickupToDestRoute = generateRoute(PICKUP, DESTINATION, 80);
+
 
 function getBearing(coord1, coord2) {
   if (!coord1 || !coord2) return 0;
@@ -197,10 +191,10 @@ function phaseStatusText(phase, eta, isDestinationSelected) {
   switch (phase) {
     case 'request':
       return isDestinationSelected
-        ? 'Destination selected. The reference card is ready to find a taxi.'
-        : 'Reference ride screen: Where to, search, and Find Taxi.';
+        ? 'Destination selected. Ready to find a taxi.'
+        : 'Where to, search, and Find Taxi.';
     case 'searching':
-      return 'Finding the closest taxi with the same monochrome flow.';
+      return 'Finding the closest taxi...';
     case 'matched':
       return `Driver matched. Arrival in ${eta} min.`;
     case 'arriving':
@@ -210,13 +204,23 @@ function phaseStatusText(phase, eta, isDestinationSelected) {
     case 'ongoing':
       return `Ride in progress to destination. ${eta} min left.`;
     case 'rating':
-      return 'Trip complete. Rating screen follows the same clean style.';
+      return 'Trip complete. How was your ride?';
     default:
       return '';
   }
 }
 
 export default function App() {
+  const [pickupPos, setPickupPos] = useState([31.5850, 35.1050]);
+  const [destinationPos, setDestinationPos] = useState([31.5400, 35.0900]);
+  const [pickupLabel, setPickupLabel] = useState('Current Location (Hebron North)');
+  const [destinationLabel, setDestinationLabel] = useState('Hebron Center');
+  const [activeModal, setActiveModal] = useState(null);
+
+  const driverStartPos = useMemo(() => [pickupPos[0] + 0.015, pickupPos[1] + 0.01], [pickupPos]);
+  const driverToPickupRoute = useMemo(() => generateRoute(driverStartPos, pickupPos, 50), [driverStartPos, pickupPos]);
+  const pickupToDestRoute = useMemo(() => generateRoute(pickupPos, destinationPos, 80), [pickupPos, destinationPos]);
+
   const [phase, setPhase] = useState('request');
   const [phaseTick, setPhaseTick] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -225,8 +229,8 @@ export default function App() {
   const [navTab, setNavTab] = useState('ride');
   const [isDestinationSelected, setIsDestinationSelected] = useState(false);
   const [routeIndex, setRouteIndex] = useState(0);
-  const [driverPos, setDriverPos] = useState(DRIVER_START);
-  const [riderPos, setRiderPos] = useState(PICKUP);
+  const [driverPos, setDriverPos] = useState(driverStartPos);
+  const [riderPos, setRiderPos] = useState(pickupPos);
   const [bearing, setBearing] = useState(45);
   const [eta, setEta] = useState(12);
   const [countdownSec, setCountdownSec] = useState(28);
@@ -248,12 +252,12 @@ export default function App() {
     }
 
     if (nextPhase === 'request') {
-      setDriverPos(DRIVER_START);
-      setRiderPos(PICKUP);
+      setDriverPos(driverStartPos);
+      setRiderPos(pickupPos);
       setRouteIndex(0);
       setEta(12);
       setCountdownSec(28);
-      setMapCenter([31.588, 35.105]);
+      setMapCenter(pickupPos);
       setMapZoom(15);
       setIsDestinationSelected(false);
       setRating(0);
@@ -261,27 +265,27 @@ export default function App() {
     }
 
     if (nextPhase === 'searching') {
-      setDriverPos(DRIVER_START);
-      setRiderPos(PICKUP);
+      setDriverPos(driverStartPos);
+      setRiderPos(pickupPos);
       setRouteIndex(0);
       setCountdownSec(28);
       setEta(4);
-      setMapCenter(PICKUP);
+      setMapCenter(pickupPos);
       setMapZoom(15);
     }
 
     if (nextPhase === 'matched') {
       setDriverPos(driverToPickupRoute[0]);
-      setRiderPos(PICKUP);
+      setRiderPos(pickupPos);
       setRouteIndex(0);
       setEta(4);
-      setMapCenter([31.592, 35.11]);
+      setMapCenter([driverToPickupRoute[0][0], driverToPickupRoute[0][1]]);
       setMapZoom(14);
     }
 
     if (nextPhase === 'arriving') {
       setDriverPos(driverToPickupRoute[0]);
-      setRiderPos(PICKUP);
+      setRiderPos(pickupPos);
       setRouteIndex(0);
       setEta(12);
       setMapCenter(driverToPickupRoute[0]);
@@ -289,11 +293,11 @@ export default function App() {
     }
 
     if (nextPhase === 'arrived') {
-      setDriverPos(PICKUP);
-      setRiderPos(PICKUP);
+      setDriverPos(pickupPos);
+      setRiderPos(pickupPos);
       setRouteIndex(driverToPickupRoute.length - 1);
       setEta(0);
-      setMapCenter(PICKUP);
+      setMapCenter(pickupPos);
       setMapZoom(16);
     }
 
@@ -307,16 +311,16 @@ export default function App() {
     }
 
     if (nextPhase === 'rating') {
-      setDriverPos(DESTINATION);
-      setRiderPos(DESTINATION);
+      setDriverPos(destinationPos);
+      setRiderPos(destinationPos);
       setRouteIndex(pickupToDestRoute.length - 1);
       setEta(0);
-      setMapCenter(DESTINATION);
+      setMapCenter(destinationPos);
       setMapZoom(15);
       setRating(0);
       setSelectedTags([]);
     }
-  }, []);
+  }, [driverStartPos, pickupPos, destinationPos, driverToPickupRoute, pickupToDestRoute]);
 
   const startSearching = useCallback(() => {
     setIsDestinationSelected(true);
@@ -410,7 +414,7 @@ export default function App() {
     }, Math.max(140, 620 / simSpeed));
 
     return () => clearInterval(timer);
-  }, [goToPhase, isPlaying, phase, phaseTick, repeatDemoFlow, routeIndex, simSpeed]);
+  }, [goToPhase, isPlaying, phase, phaseTick, repeatDemoFlow, routeIndex, simSpeed, driverToPickupRoute, pickupToDestRoute]);
 
   const startTrip = () => {
     goToPhase('ongoing', { play: true });
@@ -436,13 +440,31 @@ export default function App() {
   };
 
   const centerOnRider = () => {
-    setMapCenter(phase === 'ongoing' ? riderPos : PICKUP);
+    setMapCenter(phase === 'ongoing' ? riderPos : pickupPos);
     setMapZoom(16);
   };
 
+  const handleSelectLocation = useCallback((loc, type) => {
+    if (type === 'pickup') {
+      const newPos = [loc.latitude, loc.longitude];
+      setPickupPos(newPos);
+      setPickupLabel(`${loc.name} (${loc.townName})`);
+      setRiderPos(newPos);
+      setDriverPos([loc.latitude + 0.015, loc.longitude + 0.01]);
+      setMapCenter(newPos);
+    } else {
+      const newPos = [loc.latitude, loc.longitude];
+      setDestinationPos(newPos);
+      setDestinationLabel(`${loc.name} (${loc.townName})`);
+      setIsDestinationSelected(true);
+      setMapCenter(newPos);
+    }
+    setActiveModal(null);
+  }, []);
+
   const visibleDestination = isDestinationSelected || phase !== 'request';
   const showMapCar = ['request', 'matched', 'arriving', 'arrived', 'ongoing'].includes(phase);
-  const mapCarPos = phase === 'request' ? pickupToDestRoute[48] : driverPos;
+  const mapCarPos = phase === 'request' ? pickupToDestRoute[Math.min(48, pickupToDestRoute.length - 1)] : driverPos;
   const showBottomNav = false;
   const activeTags = rating >= 4 ? RATING_TAGS_GOOD : RATING_TAGS_LOW;
 
@@ -460,8 +482,7 @@ export default function App() {
         <div className="header-brand">
           <div className="brand-logo">M</div>
           <div>
-            <h1 className="brand-title">Mwasalati - reference ride simulation</h1>
-            <span className="brand-subtitle">Monochrome phone mockup based on the provided design</span>
+            <h1 className="brand-title">Mwasalati</h1>
           </div>
         </div>
 
@@ -555,8 +576,9 @@ export default function App() {
                     opacity: 0.28,
                   }}
                 />
-                {phase !== 'rating' && <Marker position={PICKUP} icon={getCustomIcon('pickup')} />}
-                {visibleDestination && phase !== 'rating' && <Marker position={DESTINATION} icon={getCustomIcon('destination')} />}
+                <DynamicMapLabels />
+                {phase !== 'rating' && <Marker position={pickupPos} icon={getCustomIcon('pickup')} />}
+                {visibleDestination && phase !== 'rating' && <Marker position={destinationPos} icon={getCustomIcon('destination')} />}
                 {showMapCar && <Marker position={mapCarPos} icon={getCustomIcon('driver', bearing)} />}
                 {phase === 'request' && (
                   <Polyline positions={pickupToDestRoute.slice(0, 55)} color="#0a0a0a" weight={5} opacity={0.95} />
@@ -571,6 +593,13 @@ export default function App() {
             </div>
 
             <div className="phone-ui-overlay">
+              <CityLocationPickerModal
+                isOpen={Boolean(activeModal)}
+                type={activeModal}
+                onClose={() => setActiveModal(null)}
+                onSelect={(loc) => handleSelectLocation(loc, activeModal)}
+              />
+
               <PhoneTopBar />
 
               {phase === 'request' && (
@@ -586,22 +615,25 @@ export default function App() {
               {phase === 'request' && (
                 <BookingSheet
                   isDestinationSelected={isDestinationSelected}
-                  onSelectDestination={() => setIsDestinationSelected(true)}
+                  pickupLabel={pickupLabel}
+                  destinationLabel={destinationLabel}
+                  onOpenPicker={(type) => setActiveModal(type)}
                   onCancel={() => setIsDestinationSelected(false)}
                   onRequest={startSearching}
                 />
               )}
 
               {phase === 'matched' && (
-                <MatchedDriverSheet eta={eta} onOpenRoute={() => setMapCenter(DRIVER_START)} />
+                <MatchedDriverSheet eta={eta} onOpenRoute={() => setMapCenter(driverStartPos)} />
               )}
 
               {['arriving', 'arrived', 'ongoing'].includes(phase) && (
                 <ActiveRidePanel
                   phase={phase}
                   eta={eta}
+                  destinationLabel={destinationLabel}
                   routeProgress={phase === 'ongoing' ? routeIndex / pickupToDestRoute.length : routeIndex / driverToPickupRoute.length}
-                  onOpenRoute={() => setMapCenter(phase === 'ongoing' ? DESTINATION : PICKUP)}
+                  onOpenRoute={() => setMapCenter(phase === 'ongoing' ? destinationPos : pickupPos)}
                 />
               )}
 
@@ -638,6 +670,12 @@ export default function App() {
             bearing={bearing}
             countdownSec={countdownSec}
             routeIndex={routeIndex}
+            pickupPos={pickupPos}
+            destinationPos={destinationPos}
+            pickupLabel={pickupLabel}
+            destinationLabel={destinationLabel}
+            driverToPickupRoute={driverToPickupRoute}
+            pickupToDestRoute={pickupToDestRoute}
             onAccept={() => goToPhase('arriving', { play: true })}
             onStartTrip={startTrip}
             onComplete={() => goToPhase('rating')}
@@ -649,11 +687,13 @@ export default function App() {
   );
 }
 
-function BookingSheet({ isDestinationSelected, onSelectDestination, onCancel, onRequest }) {
+function BookingSheet({ isDestinationSelected, pickupLabel, destinationLabel, onOpenPicker, onCancel, onRequest }) {
   return (
     <ReferenceBookingSheet
       isDestinationSelected={isDestinationSelected}
-      onSelectDestination={onSelectDestination}
+      pickupLabel={pickupLabel}
+      destinationLabel={destinationLabel}
+      onOpenPicker={onOpenPicker}
       onCancel={onCancel}
       onRequest={onRequest}
     />
@@ -674,11 +714,29 @@ function PhoneTopBar() {
   );
 }
 
-function ReferenceBookingSheet({ isDestinationSelected, onSelectDestination, onCancel, onRequest }) {
+function ReferenceBookingSheet({ isDestinationSelected, pickupLabel, destinationLabel, onOpenPicker, onCancel, onRequest }) {
   return (
     <div className={`booking-sheet reference-booking-card ${isDestinationSelected ? 'expanded' : ''}`}>
       <h2>Where to?</h2>
-      <DestinationFields selected={isDestinationSelected} onSelectDestination={onSelectDestination} />
+      <div className="location-picker-box">
+        <div className="location-picker-row" onClick={() => onOpenPicker('pickup')}>
+          <span className="solid-dot" />
+          <div className="picker-text">
+            <small>Pickup Location</small>
+            <strong>{pickupLabel}</strong>
+          </div>
+          <Search size={16} color="#64748b" />
+        </div>
+
+        <div className="location-picker-row" onClick={() => onOpenPicker('destination')}>
+          <MapPin size={18} color={isDestinationSelected ? '#0a0a0a' : '#94a3b8'} strokeWidth={2.4} />
+          <div className="picker-text">
+            <small>Destination</small>
+            <strong>{isDestinationSelected ? destinationLabel : 'Search city or location...'}</strong>
+          </div>
+          <Search size={16} color="#64748b" />
+        </div>
+      </div>
 
       {isDestinationSelected && <TripEstimateCard />}
 
@@ -691,31 +749,6 @@ function ReferenceBookingSheet({ isDestinationSelected, onSelectDestination, onC
           Clear destination
         </button>
       )}
-    </div>
-  );
-}
-
-function DestinationFields({ selected, onSelectDestination }) {
-  return <ReferenceDestinationFields selected={selected} onSelectDestination={onSelectDestination} />;
-}
-
-function ReferenceDestinationFields({ selected, onSelectDestination }) {
-  return (
-    <div className="reference-fields">
-      <button className="reference-search" onClick={onSelectDestination}>
-        <span>{selected ? DESTINATION_LABEL : 'search destination'}</span>
-        <Search size={19} strokeWidth={2.1} />
-      </button>
-
-      <button className="reference-option current" onClick={onSelectDestination}>
-        <span className="solid-dot" />
-        <span>Current Location</span>
-      </button>
-
-      <button className="reference-option" onClick={onSelectDestination}>
-        <MapPin size={18} strokeWidth={2.2} />
-        <span>Choose on map</span>
-      </button>
     </div>
   );
 }
@@ -769,22 +802,23 @@ function MatchedDriverSheet({ eta, onOpenRoute }) {
   );
 }
 
-function ActiveRidePanel({ phase, eta, routeProgress, onOpenRoute }) {
+function ActiveRidePanel({ phase, eta, destinationLabel, routeProgress, onOpenRoute }) {
   return (
     <ReferenceActiveRidePanel
       phase={phase}
       eta={eta}
+      destinationLabel={destinationLabel}
       routeProgress={routeProgress}
       onOpenRoute={onOpenRoute}
     />
   );
 }
 
-function ReferenceActiveRidePanel({ phase, eta, routeProgress, onOpenRoute }) {
+function ReferenceActiveRidePanel({ phase, eta, destinationLabel, routeProgress, onOpenRoute }) {
   const isOngoing = phase === 'ongoing';
   const title = isOngoing ? 'Ride in progress' : 'Taxi is on the way';
   const subtitle = isOngoing
-    ? `Heading to ${DESTINATION_LABEL}`
+    ? `Heading to ${destinationLabel}`
     : phase === 'arrived'
       ? 'Taxi arrived at pickup'
       : `Arrives in ${eta} min`;
@@ -943,7 +977,23 @@ function BottomNav({ navTab, onChange }) {
   );
 }
 
-function DriverPhone({ phase, driverPos, bearing, countdownSec, routeIndex, onAccept, onStartTrip, onComplete, onReset }) {
+function DriverPhone({
+  phase,
+  driverPos,
+  bearing,
+  countdownSec,
+  routeIndex,
+  pickupPos,
+  destinationPos,
+  pickupLabel,
+  destinationLabel,
+  driverToPickupRoute,
+  pickupToDestRoute,
+  onAccept,
+  onStartTrip,
+  onComplete,
+  onReset,
+}) {
   const showPickupRoute = ['searching', 'matched', 'arriving', 'arrived'].includes(phase);
   const showDestinationMarker = ['searching', 'matched', 'arriving', 'arrived', 'ongoing'].includes(phase);
   const tripProgress = Math.min(Math.max((routeIndex / pickupToDestRoute.length) * 100, 8), 100);
@@ -970,9 +1020,10 @@ function DriverPhone({ phase, driverPos, bearing, countdownSec, routeIndex, onAc
                 opacity: 0.28,
               }}
             />
+            <DynamicMapLabels />
             <Marker position={driverPos} icon={getDriverMaterialIcon('driver', bearing)} />
-            {showPickupRoute && <Marker position={PICKUP} icon={getDriverMaterialIcon('pickup')} />}
-            {showDestinationMarker && <Marker position={DESTINATION} icon={getDriverMaterialIcon('destination')} />}
+            {showPickupRoute && <Marker position={pickupPos} icon={getDriverMaterialIcon('pickup')} />}
+            {showDestinationMarker && <Marker position={destinationPos} icon={getDriverMaterialIcon('destination')} />}
             {showPickupRoute && <Polyline positions={driverToPickupRoute} color="#0a0a0a" weight={5} opacity={0.95} />}
             {phase === 'ongoing' && <Polyline positions={pickupToDestRoute} color="#0a0a0a" weight={5} opacity={0.95} />}
           </MapContainer>
@@ -1010,8 +1061,8 @@ function DriverPhone({ phase, driverPos, bearing, countdownSec, routeIndex, onAc
               </div>
               <div className="driver-request-card driver-incoming-card">
                 <div className="driver-card-row"><MaterialIcon name="person" size={20} className="driver-card-icon" /> <span>Ahmad Alarja</span></div>
-                <div className="driver-card-row"><MaterialIcon name="trip_origin" size={20} className="driver-card-icon" /> <span>Pickup: Current Location</span></div>
-                <div className="driver-card-row"><MaterialIcon name="flag" size={20} className="driver-card-icon" /> <span>Dropoff: Hebron Center</span></div>
+                <div className="driver-card-row"><MaterialIcon name="trip_origin" size={20} className="driver-card-icon" /> <span>Pickup: {pickupLabel}</span></div>
+                <div className="driver-card-row"><MaterialIcon name="flag" size={20} className="driver-card-icon" /> <span>Dropoff: {destinationLabel}</span></div>
               </div>
               <div className="driver-actions">
                 <button className="btn-outlined" onClick={onReset}>Decline</button>
@@ -1026,8 +1077,8 @@ function DriverPhone({ phase, driverPos, bearing, countdownSec, routeIndex, onAc
               <StepHeader activeStep={phase === 'arrived' ? 2 : 1} title={phase === 'arrived' ? '2. Arrived at pickup' : '1. Heading to pickup'} />
               <div className="driver-step-card">
                 <p>Status: {phase === 'arrived' ? 'Waiting for rider' : 'Driving to pickup'}</p>
-                <p>Pickup: Current Location</p>
-                <p>Dropoff: Hebron Center</p>
+                <p>Pickup: {pickupLabel}</p>
+                <p>Dropoff: {destinationLabel}</p>
               </div>
               <button className="btn-primary full-width" onClick={onStartTrip}>
                 <MaterialIcon name="play_arrow" size={18} />
@@ -1042,7 +1093,7 @@ function DriverPhone({ phase, driverPos, bearing, countdownSec, routeIndex, onAc
               <StepHeader activeStep={3} title="3. Heading to destination" />
               <div className="driver-step-card">
                 <p>Status: On trip to destination</p>
-                <p>Dropoff: Hebron Center</p>
+                <p>Dropoff: {destinationLabel}</p>
               </div>
               <div className="ride-progress driver-progress">
                 <div style={{ width: tripProgress + '%' }} />
@@ -1086,3 +1137,147 @@ function StepHeader({ activeStep, title }) {
     </div>
   );
 }
+
+function CityLocationPickerModal({ isOpen, type, onClose, onSelect }) {
+  const [search, setSearch] = useState('');
+  const [selectedTown, setSelectedTown] = useState(null);
+
+  const filteredTowns = useMemo(() => {
+    if (!areasData?.towns) return [];
+    if (!search) return areasData.towns;
+    const s = search.toLowerCase();
+    return areasData.towns.filter(t => 
+      t.name.toLowerCase().includes(s) || 
+      (t.locations && t.locations.some(l => l.name.toLowerCase().includes(s)))
+    );
+  }, [search]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="location-modal-backdrop" onClick={onClose}>
+      <div className="location-modal-sheet" onClick={e => e.stopPropagation()}>
+        <div className="modal-header-row">
+          <h3>Select {type === 'pickup' ? 'Pickup Location' : 'Destination'}</h3>
+          <button className="close-modal-btn" onClick={onClose}><X size={20} /></button>
+        </div>
+
+        <div className="modal-search-box">
+          <Search size={18} color="#64748b" />
+          <input
+            type="text"
+            placeholder="Search Palestinian cities, towns, landmarks..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            autoFocus
+          />
+          {search && <button className="clear-search" onClick={() => setSearch('')}><X size={16} /></button>}
+        </div>
+
+        <div className="modal-body-content">
+          {!selectedTown ? (
+            <div className="towns-grid">
+              {filteredTowns.map(t => (
+                <div 
+                  key={t.name} 
+                  className="town-card"
+                  onClick={() => {
+                    if (t.locations && t.locations.length > 0) {
+                      setSelectedTown(t);
+                    } else {
+                      onSelect({ name: `${t.name} Center`, townName: t.name, latitude: t.latitude, longitude: t.longitude });
+                    }
+                  }}
+                >
+                  <div className="town-info">
+                    <strong>{t.name}</strong>
+                    <span>{t.locations ? t.locations.length : 0} locations</span>
+                  </div>
+                  <ChevronDown size={18} style={{ transform: 'rotate(-90deg)' }} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="locations-list">
+              <div className="back-to-towns" onClick={() => setSelectedTown(null)}>
+                <ChevronDown size={18} style={{ transform: 'rotate(90deg)' }} />
+                <strong>Back to Cities ({selectedTown.name})</strong>
+              </div>
+              <div className="location-item town-center-item" onClick={() => onSelect({ name: `${selectedTown.name} Center`, townName: selectedTown.name, latitude: selectedTown.latitude, longitude: selectedTown.longitude })}>
+                <MapPin size={18} color="#2563eb" />
+                <div>
+                  <strong>{selectedTown.name} Center</strong>
+                  <span>City / Town Center</span>
+                </div>
+              </div>
+              {selectedTown.locations.map(loc => (
+                <div 
+                  key={loc.name}
+                  className="location-item"
+                  onClick={() => onSelect({ name: loc.name, townName: selectedTown.name, latitude: loc.latitude, longitude: loc.longitude })}
+                >
+                  <MapPin size={18} color="#0a0a0a" />
+                  <div>
+                    <strong>{loc.name}</strong>
+                    <span>{loc.category ? loc.category.toUpperCase() : 'Landmark'}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DynamicMapLabels() {
+  const map = useMap();
+  const [zoom, setZoom] = useState(() => map.getZoom());
+
+  useEffect(() => {
+    const onZoom = () => setZoom(map.getZoom());
+    map.on('zoomend', onZoom);
+    return () => {
+      map.off('zoomend', onZoom);
+    };
+  }, [map]);
+
+  if (!areasData?.towns) return null;
+
+  const majorCities = ['الخليل', 'بيت لحم', 'رام الله والبيرة', 'نابلس', 'أريحا', 'جنين', 'طولكرم', 'قلقيلية', 'القدس', 'غزة'];
+  
+  return (
+    <>
+      {areasData.towns.map((t) => {
+        const isMajor = majorCities.some(mc => t.name.includes(mc));
+        const minZoom = isMajor ? 8 : (t.locations && t.locations.length > 8 ? 12 : 13);
+        
+        if (zoom < minZoom) return null;
+
+        const icon = L.divIcon({
+          html: `<div class="map-label-text ${isMajor ? 'map-label-major' : 'map-label-minor'}">${t.name}</div>`,
+          className: 'clean-map-label-wrap',
+          iconSize: [null, null],
+          iconAnchor: [30, 10],
+        });
+
+        return <Marker key={`label-town-${t.name}`} position={[t.latitude, t.longitude]} icon={icon} interactive={false} />;
+      })}
+
+      {zoom >= 15 && areasData.towns.flatMap((t) => 
+        (t.locations || []).slice(0, 8).map((loc) => {
+          const icon = L.divIcon({
+            html: `<div class="map-label-text map-label-landmark">• ${loc.name}</div>`,
+            className: 'clean-map-label-wrap',
+            iconSize: [null, null],
+            iconAnchor: [30, 8],
+          });
+          return <Marker key={`label-loc-${t.name}-${loc.name}`} position={[loc.latitude, loc.longitude]} icon={icon} interactive={false} />;
+        })
+      )}
+    </>
+  );
+}
+
+
